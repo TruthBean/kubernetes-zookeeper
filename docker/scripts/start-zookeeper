@@ -26,7 +26,7 @@
 #                         write ahead log. The default is 
 #                         /var/lib/zookeeper/data/log.
 
-#     --conf_dir          The directoyr where the ZooKeeper process will store its
+#     --conf_dir          The directory where the ZooKeeper process will store its
 #                         configuration. The default is /opt/zookeeper/conf.
 
 #     --client_port       The port on which the ZooKeeper process will listen for 
@@ -108,7 +108,7 @@ Starts a ZooKeeper server based on the supplied options.
                         write ahead log. The default is 
                         /var/lib/zookeeper/data/log.
 
-    --conf_dir          The directoyr where the ZooKeeper process will store its
+    --conf_dir          The directory where the ZooKeeper process will store its
                         configuration. The default is /opt/zookeeper/conf.
 
     --client_port       The port on which the ZooKeeper process will listen for 
