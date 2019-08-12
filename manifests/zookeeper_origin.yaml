@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: zk-hs
-  namespace: common
+  namespace: default
   labels:
     app: zk
 spec:
@@ -20,7 +20,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: zk-cs
-  namespace: common
+  namespace: default
   labels:
     app: zk
 spec:
@@ -35,18 +35,18 @@ apiVersion: policy/v1beta1
 kind: PodDisruptionBudget
 metadata:
   name: zk-pdb
-  namespace: common
+  namespace: default
 spec:
   selector:
     matchLabels:
       app: zk
   maxUnavailable: 1
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: zk
-  namespace: common
+  namespace: default
 spec:
   serviceName: zk-hs
   selector:

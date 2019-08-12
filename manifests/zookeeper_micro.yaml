@@ -28,7 +28,7 @@ spec:
   selector:
     app: zk
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: zk
@@ -38,6 +38,9 @@ spec:
   podManagementPolicy: Parallel
   updateStrategy:
     type: RollingUpdate
+  selector:
+    matchLabels:
+      app: zk
   template:
     metadata:
       labels:
